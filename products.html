@@ -1,0 +1,290 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jaylin</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+</head>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, .row {
+    text-align: center;
+}
+
+.row figure {
+    height: 240px;
+    width: 240px;
+    margin:0;
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.7);
+    transition: all 1s ease-in-out;
+    background-repeat:no-repeat;
+    z-index:2;
+    display:inline-block;
+    position:relative;
+
+}
+
+.row a {
+    display: inline-block;
+    text-align: center;
+    margin:40px;
+    text-decoration:none;
+    color:white;
+}
+
+.row a p {
+    position:absolute;
+    opacity: 0;
+    font-size: 20px;
+    top:45%;
+    z-index:100;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+figure:hover p {
+    opacity:1;
+}
+
+figure:after {
+    content:"";
+    display:inline-block;
+    height:100%;
+    width:100%;
+    background-color:#DA291C;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity:0;
+    transition: all 0.4s ease-in-out 0s;
+    z-index:99;
+}
+
+figure:hover:after {
+    opacity:0.7;
+}
+
+.photo01 {
+    background-image: url( "22.jpg" );
+}
+
+.photo02 {
+    background-image: url("33.jpg");
+}
+
+.photo03 {
+    background-image: url("2.jpg");
+}
+
+.photo04 {
+    background-image: url("4.jpg");
+}
+
+.photo05 {
+    background-image: url("3.jpg");
+}
+
+.photo06 {
+    background-image: url("44.png");
+}
+
+.photo07 {
+    background-image: url("5.png");
+}
+
+.photo08 {
+    background-image: url("6.png");
+}
+
+/* lightbox */
+
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+  z-index:300;
+}
+
+.lightbox-target .container {
+  margin: auto;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  text-align:left;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+h3 {
+    text-align: center;
+}
+
+.container .elements {
+    display:inline-block;
+    width: 40%;
+    max-height: 425px;
+
+}
+
+ul {
+    list-style-image: url('https://insider.ivanti.com/resources/statics/13067/Ivanti_rgb.png?a=1527884897521');
+    overflow: hidden;
+    overflow-y:auto;
+    max-height: 369px;
+    margin:0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.lightbox-target:target img {
+    height: 400px;
+    vertical-align: top;
+}
+    </style>
+
+<body>
+    <div>
+        <a href="index.html" style="text-align: center; text-decoration: none;margin-left: 49%; color: black; font-size: 25px;font-weight: bolder;">Home</a>
+    </div>
+
+<div class= "row">
+    
+    <a class= "lightbox" href= "#photo01" >
+        <figure class= "photo01"><p>크리스마스 모션<br>C4D<br><br>2020</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo01">
+        
+        <div class= "container">
+            <img src= "22.jpg">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+
+    </div>
+
+    <a class= "lightbox" href= "#photo02">
+        <figure class= "photo02"><p>캐릭터 디자인<br>C4D<br><br>2020</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo02">
+        <div class= "container">
+            <img src= "33.jpg">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+
+    </div>
+
+    <a class= "lightbox" href="#photo03">
+        <figure class= "photo03"><p>명함 디자인<br><br>2018</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo03">
+        <div class= "container">
+            <img src= "2.jpg">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+    </div>
+
+    <a class= "lightbox" href="#photo04">
+        <figure class= "photo04"><p>UX/UI<br><br>2020</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo04">
+        <div class= "container">
+            <img src= "4.jpg">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+    </div>
+
+        <a class= "lightbox" href="#photo05">
+        <figure class= "photo05"><p>패키지디자인<br><br>2021</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo05">
+        <div class= "container">
+            <img src= "3.jpg">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+    </div>
+
+        <a class= "lightbox" href="#photo06">
+        <figure class= "photo06"><p>디자이너 소개 <br>포스터 디자인<br><br>2021</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo06">
+        <div class= "container">
+            <img src= "44.png">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+    </div>
+
+    <a class= "lightbox" href="#photo07">
+        <figure class= "photo07"><p>해리포터 웹포스터<br><br>2020 </p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo07">
+        <div class= "container">
+            <img src= "5.png">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+    </div>
+
+    <a class= "lightbox" href="#photo08">
+        <figure class= "photo08"><p>킹스맨 웹포스터<br><br>2020</p></figure>
+    </a>
+
+    <div class= "lightbox-target" id="photo08">
+        <div class= "container">
+            <img src= "6.png">
+            <a class= "lightbox-close" href= "#">X</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
